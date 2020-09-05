@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -163,20 +164,20 @@ const Navbar = () =>{
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" iconElementLeft = {<img src='.images/sample.jpeg' alt="Logo" />} >
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography className={classes.title} variant="h6" noWrap>
             Architor
           </Typography>
-          <div className={classes.search}>
+          {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -188,10 +189,10 @@ const Navbar = () =>{
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
+          </div> */}
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            {/* <IconButton aria-label="show 4 new mails" color="inherit">
                 <MailIcon />
                </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
@@ -206,7 +207,12 @@ const Navbar = () =>{
               color="inherit"
             >
               <AccountCircle />
-            </IconButton>
+            </IconButton> */}
+            <Button variant="contained" color="primary">Home</Button>
+            <Button variant="contained" color="primary">About</Button>
+            <Button variant="contained" color="primary">Services</Button>
+            <Button variant="contained" color="primary">Blog</Button>
+            <Button variant="contained" color="primary">Contat Us</Button>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
